@@ -14,6 +14,12 @@ async function main() {
     console.log(await r.text());
     return;
   }
+  if (cmd === "people") {
+    const name = rest.join(" ");
+    const r = await fetch(`${base}/people?name=${encodeURIComponent(name)}`);
+    console.log(await r.text());
+    return;
+  }
   if (cmd === "doc") {
     const id = rest.join(" ");
     const r = await fetch(`${base}/doc?id=${encodeURIComponent(id)}`);

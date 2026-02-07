@@ -10,6 +10,7 @@ Use this skill to query a locally-running (or remote) **epstein-search-mcp** ser
 ## Config
 
 - `EPSTEIN_SEARCH_MCP_URL` (default: `http://127.0.0.1:3333`)
+  - For Cloudflare deploy: `https://epstein-search.alex-074.workers.dev`
 
 ## Endpoints (current stub)
 
