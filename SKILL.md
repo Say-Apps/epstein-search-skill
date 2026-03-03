@@ -16,6 +16,7 @@ Use this skill to query a locally-running (or remote) **epstein-search-mcp** ser
 
 - `GET /search?q=<query>` → `{ results: [{ id, title, snippet }] }`
 - `GET /doc?id=<id>` → `{ id, title, text }`
+- `GET /people?name=<name>` → `{ results: [...] }` *(optional; depends on MCP server build)*
 
 ## Workflow
 
@@ -31,4 +32,7 @@ If you need a deterministic client call, use:
 ```bash
 node scripts/query.mjs search "your query"
 node scripts/query.mjs doc "demo.md"
+
+# quick connectivity check (calls /search?q=test)
+node scripts/query.mjs health
 ```
