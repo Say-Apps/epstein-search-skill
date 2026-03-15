@@ -12,10 +12,11 @@ Use this skill to query a locally-running (or remote) **epstein-search-mcp** ser
 - `EPSTEIN_SEARCH_MCP_URL` (default: `http://127.0.0.1:3333`)
   - For Cloudflare deploy: `https://epstein-search.alex-074.workers.dev`
 
-## Endpoints (current stub)
+## Endpoints (expected)
 
-- `GET /search?q=<query>` → `{ results: [{ id, title, snippet }] }`
-- `GET /doc?id=<id>` → `{ id, title, text }`
+- `GET /search?q=<query>` → `{ results: [{ id, title, snippet, ... }] }`
+- `GET /doc?id=<id>` → `{ id, title, text, ... }`
+- `GET /people?name=<name>` → `{ results: [...] }` *(optional; depends on server)*
 
 ## Workflow
 
